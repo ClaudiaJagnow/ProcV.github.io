@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Aula prática sobre a sintaxe da função PROCV no Excel, com exemplos e atividade interativa.">
+    <title>Curso de Excel – Sintaxe do PROCV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Função PROCV</h1>
+    <p>Entendendo a sintaxe passo a passo</p>
+</header>
+
+<main class="container">
+
+    <!-- EXPLICAÇÃO -->
+    <section class="introducao">
+        <h2>Sintaxe da Função PROCV</h2>
+        <p>A estrutura básica da função PROCV é:</p>
+
+        <div class="caixa-codigo">
+            <code>=PROCV(valor_procurado; tabela_matriz; núm_índice_coluna; [procurar_intervalo])</code>
+        </div>
+
+        <ul>
+            <li><strong>valor_procurado:</strong> é o valor que você deseja encontrar.</li>
+            <li><strong>tabela_matriz:</strong> é a tabela onde a busca será feita.</li>
+            <li><strong>núm_índice_coluna:</strong> é o número da coluna que contém o resultado.</li>
+            <li><strong>procurar_intervalo:</strong> define se a busca será exata (FALSO) ou aproximada (VERDADEIRO).</li>
+        </ul>
+    </section>
+
+    <!-- EXEMPLO -->
+    <section class="introducao">
+        <h2>Exemplo Prático</h2>
+        <p>Imagine a tabela abaixo:</p>
+
+        <table class="tabela-exemplo">
+            <tr>
+                <th>Código</th>
+                <th>Produto</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Caderno</td>
+                <td>15,00</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Caneta</td>
+                <td>3,50</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Mochila</td>
+                <td>120,00</td>
+            </tr>
+        </table>
+
+        <p>Para buscar o preço do produto com código <strong>102</strong>, usamos:</p>
+
+        <div class="caixa-codigo">
+            <code>=PROCV(102; A2:C4; 3; FALSO)</code>
+        </div>
+    </section>
+
+    <!-- ATIVIDADE -->
+    <section class="atividade">
+        <h2>Atividade Prática</h2>
+        <p>
+            Qual função PROCV correta para buscar o <strong>nome do produto</strong>
+            usando o código <strong>103</strong>?
+        </p>
+
+        <label for="resposta" class="sr-only">Resposta da atividade</label>
+        <input type="text" id="resposta" placeholder="Digite a fórmula aqui">
+        <button onclick="verificarResposta()">Verificar resposta</button>
+
+        <p id="feedback"></p>
+    </section>
+    <section class="forum">
+    <h2>Fórum de Discussão</h2>
+    <p>
+        Use este espaço para tirar dúvidas, compartilhar experiências ou comentar
+        o que você achou da função PROCV.
+    </p>
+
+    <div class="forum-form">
+        <input type="text" id="nome" placeholder="Seu nome">
+        <textarea id="mensagem" placeholder="Digite sua dúvida ou comentário"></textarea>
+        <button onclick="publicarComentario()">Publicar</button>
+    </div>
+
+    <div id="lista-comentarios" class="comentarios">
+        <h3>Comentários</h3>
+    </div>
+</section>
+
+    <!-- NAVEGAÇÃO -->
+    <div class="acoes">
+        <button onclick="voltar()">⬅ Voltar</button>
+        <button onclick="proximaAula3()">Próxima ➜</button>
+    </div>
+
+</main>
+
+<footer>
+    <p>Curso de Excel • Função PROCV</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
